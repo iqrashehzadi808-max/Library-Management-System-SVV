@@ -1,0 +1,27 @@
+Software Requirements Specification
+Library Management System
+
+1. Introduction
+The Library Management System is designed to manage books, students, book issuing, and returning processes in a library.
+
+2. Objectives
+- Manage library books
+- Issue books to students
+- Return books
+- Prevent duplicate issuing
+
+3. Functional Requirements
+FR1: Student can search books.
+FR2: Librarian can issue books.
+FR3: Student can return books.
+FR4: System stores issue records.
+
+4. Non Functional Requirements
+NFR1: System should be secure.
+NFR2: System should respond quickly.
+NFR3: Data should remain consistent.
+
+5. System States
+1. Available
+2. Issued
+3. Returned

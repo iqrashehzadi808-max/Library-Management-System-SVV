@@ -1,0 +1,4 @@
+Requirement | Defect Type | Explanation
+System should be fast | Ambiguous | “fast” clear nahi
+Student may issue many books | Inconsistency | duplicate issue ho sakta
+System should work properly | Non-verifiable | measurable nahi

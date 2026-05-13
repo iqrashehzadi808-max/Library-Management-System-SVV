@@ -1,0 +1,47 @@
+[BOOK, STUDENT]
+----------------------------
+LibrarySystem
+----------------------------
+availableBooks : ℙ BOOK
+issuedBooks : BOOK ↔ STUDENT
+
+----------------------------
+INIT
+----------------------------
+
+availableBooks = BOOK
+issuedBooks = ∅
+
+----------------------------
+INVARIANTS
+----------------------------
+
+dom issuedBooks ∩ availableBooks = ∅
+
+issuedBooks ∈ BOOK ↔ STUDENT
+
+----------------------------
+OPERATIONS
+----------------------------
+
+IssueBook
+ΔLibrarySystem
+
+book? : BOOK
+student? : STUDENT
+
+book? ∈ availableBooks
+
+availableBooks' = availableBooks \ {book?}
+issuedBooks' = issuedBooks ∪ {book? ↦ student?}
+
+----------------------------
+
+ReturnBook
+ΔLibrarySystem
+
+book? : BOOK
+
+book? ∈ dom issuedBooks
+
+availableBooks' = availableBooks ∪ {book?}

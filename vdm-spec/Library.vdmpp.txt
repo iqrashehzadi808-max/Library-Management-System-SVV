@@ -1,0 +1,28 @@
+class Library
+
+instance variables
+
+availableBooks : set of nat := {1,2,3,4,5};
+issuedBooks : map nat to nat := {|->};
+
+operations
+
+IssueBook : nat * nat ==> ()
+IssueBook(bookId, studentId) ==
+(
+    if bookId in set availableBooks
+    then
+        (
+            availableBooks := availableBooks \ {bookId};
+            issuedBooks := issuedBooks munion {bookId |-> studentId}
+        )
+);
+
+ReturnBook : nat ==> ()
+ReturnBook(bookId) ==
+(
+    availableBooks := availableBooks union {bookId};
+    issuedBooks := {bookId} <-: issuedBooks
+);
+
+end Library
